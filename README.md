@@ -16,37 +16,37 @@ Step3: Run the command:
       
 Step4: Once you are inside the container bash, run the below commands to setup the src and dest db for the tool data migration:
 
-psql -U airflow
+		psql -U airflow
 
-CREATE DATABASE src;
+		CREATE DATABASE src;
 
-CREATE DATABASE dest;
+		CREATE DATABASE dest;
 
-\c src;
+		\c src;
 
-CREATE TABLE employee (
-	id serial PRIMARY KEY,
-	name VARCHAR ( 50 ) NOT NULL,
-	email VARCHAR ( 255 ) NOT NULL
-);
+		CREATE TABLE employee (
+			id serial PRIMARY KEY,
+			name VARCHAR ( 50 ) NOT NULL,
+			email VARCHAR ( 255 ) NOT NULL
+		);
 
-INSERT INTO 
-    employee (name, email)
-VALUES
-    ('Peter','peter@email.com'),
-    ('Tony','tony@email.com'),
-    ('Bruce','bruce@email.com'),
-    ('John','john@email.com'),
-    ('Jessie','jessie@email.com'),
-    ('Jackie','jackie@email.com');
+		INSERT INTO 
+		    employee (name, email)
+		VALUES
+		    ('Peter','peter@email.com'),
+		    ('Tony','tony@email.com'),
+		    ('Bruce','bruce@email.com'),
+		    ('John','john@email.com'),
+		    ('Jessie','jessie@email.com'),
+		    ('Jackie','jackie@email.com');
 
- \c dest;
+		 \c dest;
 
- CREATE TABLE employee (
-	id serial PRIMARY KEY,
-	name VARCHAR ( 50 ) NOT NULL,
-	email VARCHAR ( 255 ) NOT NULL
-);
+		 CREATE TABLE employee (
+			id serial PRIMARY KEY,
+			name VARCHAR ( 50 ) NOT NULL,
+			email VARCHAR ( 255 ) NOT NULL
+		);
 
 Step5: Go to any browser and open the localhost:8080 in it.(you can see the airflow UI in it)
 
