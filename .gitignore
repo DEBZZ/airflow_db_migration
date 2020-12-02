@@ -1,0 +1,6 @@
+**/.idea
+**/__pycache__
+**/.DS_Store
+**/airflow-logs/dag_processor_manager
+**/airflow-logs/scheduler
+**/airflow-logs/test-dag-airflow
